@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOIRÉ | Haute Couture & Modern Editorial Fashion Atelier</title>
+    <meta name="description" content="NOIRÉ - A luxury editorial fashion atelier exploring form, texture, and architectural minimalism. Discover Women's, Men's, and Couture Autumn/Winter '26 collections.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- External JS (Deferred) -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- 1. ANNOUNCEMENT BAR -->
+    <div class="announcement-bar" id="announcement-bar">
+        <div class="announcement-ticker">
+            <span class="ticker-item">COMPLIMENTARY EXPRESS WORLDWIDE SHIPPING ON ORDERS OVER ₹15,000</span>
+            <span class="ticker-separator">•</span>
+            <span class="ticker-item">USE PROMO CODE 'NOIRE10' FOR 10% OFF YOUR ATELIER FIRST ORDER</span>
+            <span class="ticker-separator">•</span>
+            <span class="ticker-item">AUTUMN / WINTER '26 LOOKBOOK N°04 IS NOW LIVE</span>
+            <span class="ticker-separator">•</span>
+            <span class="ticker-item">COMPLIMENTARY EXPRESS WORLDWIDE SHIPPING ON ORDERS OVER ₹15,000</span>
+        </div>
+    </div>
+
+    <!-- 2. NAVIGATION BAR -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open Navigation Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="3" y1="7" x2="21" y2="7"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="17" x2="21" y2="17"></line>
+                </svg>
+            </button>
+
+            <div class="nav-brand">
+                <a href="#" class="logo">NOIRÉ</a>
+                <span class="logo-sub">HAUTE COUTURE</span>
+            </div>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#featured-products" class="nav-item" data-filter-link="new-arrivals">New In</a>
+                <a href="#featured-products" class="nav-item" data-filter-link="women">Women</a>
+                <a href="#featured-products" class="nav-item" data-filter-link="men">Men</a>
+                <a href="#featured-products" class="nav-item" data-filter-link="dresses">Dresses</a>
+                <a href="#featured-products" class="nav-item" data-filter-link="jackets">Jackets</a>
+                <a href="#lookbook" class="nav-item">Lookbook</a>
+                <a href="#featured-products" class="nav-item sale-nav-item" data-filter-link="sale">Sale</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Search Button -->
+                <button class="icon-btn" id="search-btn" aria-label="Search Collection" title="Search (Press '/')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+
+                <!-- Account / Orders Button -->
+                <button class="icon-btn" id="account-btn" aria-label="My Account & Orders" title="My Account & Orders">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </button>
+
+                <!-- Wishlist Button -->
+                <button class="icon-btn wishlist-icon-btn" id="wishlist-btn" aria-label="Wishlist" title="View Wishlist">
+                    <svg class="heart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    <span class="badge count-badge" id="wishlist-count">0</span>
+                </button>
+
+                <!-- Shopping Bag Button -->
+                <button class="icon-btn bag-icon-btn" id="bag-btn" aria-label="Shopping Bag" title="View Shopping Bag">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="badge count-badge bag-badge" id="bag-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3 & 4. HERO SECTION WITH AUTOMATIC 4-IMAGE CAROUSEL -->
+    <section class="hero-section" id="hero">
+        <div class="hero-carousel" id="hero-carousel">
+            
+            <!-- Slide 1 -->
+            <div class="carousel-slide active" data-slide-index="0">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1600&auto=format&fit=crop" alt="NOIRÉ Autumn Overcoat Editorial" class="slide-img">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="slide-tagline">AUTUMN / WINTER '26 EDITION</span>
+                    <h1 class="slide-title">THE SILENT ART OF FORM</h1>
+                    <p class="slide-desc">Sculpted silhouettes and understated luxury crafted from hand-loomed wool and Italian silk.</p>
+                    <div class="slide-actions">
+                        <a href="#featured-products" class="btn btn-primary">Explore Collection</a>
+                        <a href="#lookbook" class="btn btn-outline">View Lookbook</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-slide" data-slide-index="1">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1600&auto=format&fit=crop" alt="NOIRÉ Haute Couture Draped Dress" class="slide-img">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="slide-tagline">HAUTE COUTURE SELECTION</span>
+                    <h1 class="slide-title">ARCHITECTURAL SHADOWS</h1>
+                    <p class="slide-desc">Uncompromising precision in tailoring meets the fluid grace of evening silhouettes.</p>
+                    <div class="slide-actions">
+                        <a href="#featured-products" class="btn btn-primary" data-filter-link="women">Discover Women's</a>
+                        <a href="#story" class="btn btn-outline">Atelier Craft</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-slide" data-slide-index="2">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1600&auto=format&fit=crop" alt="NOIRÉ Tailored Menswear Editorial" class="slide-img">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="slide-tagline">ATELIER MENSWEAR 2026</span>
+                    <h1 class="slide-title">TAILORED REFINEMENT</h1>
+                    <p class="slide-desc">Double-breasted coats and pure cashmere knits engineered for quiet strength.</p>
+                    <div class="slide-actions">
+                        <a href="#featured-products" class="btn btn-primary" data-filter-link="men">Shop Menswear</a>
+                        <a href="#featured-products" class="btn btn-outline" data-filter-link="new-arrivals">New Arrivals</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-slide" data-slide-index="3">
+                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1600&auto=format&fit=crop" alt="NOIRÉ Monochrome Silk Portrait" class="slide-img">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="slide-tagline">LIMITED EDITORIAL RELEASE</span>
+                    <h1 class="slide-title">PERPETUAL ELEGANCE</h1>
+                    <p class="slide-desc">Monochrome evening robes and tailored outerwear built to transcend ephemeral trends.</p>
+                    <div class="slide-actions">
+                        <a href="#featured-products" class="btn btn-primary">Explore Catalog</a>
+                        <a href="#newsletter" class="btn btn-outline">Join Private List</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button class="carousel-arrow prev-arrow" id="carousel-prev" aria-label="Previous Slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <button class="carousel-arrow next-arrow" id="carousel-next" aria-label="Next Slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+
+            <!-- Slide Indicators -->
+            <div class="carousel-indicators" id="carousel-indicators">
+                <button class="indicator-dot active" data-slide-to="0" aria-label="Slide 1"></button>
+                <button class="indicator-dot" data-slide-to="1" aria-label="Slide 2"></button>
+                <button class="indicator-dot" data-slide-to="2" aria-label="Slide 3"></button>
+                <button class="indicator-dot" data-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. BRAND STATEMENT -->
+    <section class="brand-statement-section">
+        <div class="container">
+            <div class="brand-statement-content">
+                <span class="statement-subtitle">MANIFESTO</span>
+                <blockquote class="statement-quote">
+                    "NOIRÉ is an exploration of form, texture, and understated luxury. We sculpt garments for the modern iconoclast who speaks through quiet elegance."
+                </blockquote>
+                <div class="statement-pillars">
+                    <div class="pillar-item">
+                        <span class="pillar-num">01</span>
+                        <h4 class="pillar-title">SUSTAINABLE SILK & CASHMERE</h4>
+                        <p class="pillar-desc">Ethically sourced raw fibers woven by historical mills in Como & Biella.</p>
+                    </div>
+                    <div class="pillar-item">
+                        <span class="pillar-num">02</span>
+                        <h4 class="pillar-title">ARCHITECTURAL TAILORING</h4>
+                        <p class="pillar-desc">Sculpted shoulder lines and fluid drapes crafted for timeless longevity.</p>
+                    </div>
+                    <div class="pillar-item">
+                        <span class="pillar-num">03</span>
+                        <h4 class="pillar-title">LIMITED ATELIER RUNS</h4>
+                        <p class="pillar-desc">Numbered capsule editions ensuring complete exclusivity for every garment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. EDITORIAL / LOOKBOOK SECTION -->
+    <section class="lookbook-section" id="lookbook">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">EDITORIAL LOOKBOOK N°04</span>
+                <h2 class="section-title">ARCHITECTURAL SHADOWS</h2>
+                <p class="section-desc">A visual study in monochromatic harmony, volume, and structured drape photographed in Paris.</p>
+            </div>
+
+            <div class="lookbook-grid">
+                <div class="lookbook-card large">
+                    <div class="lookbook-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?q=80&w=1000&auto=format&fit=crop" alt="Lookbook Look 01 - Silk Overcoat" class="lookbook-img">
+                        <div class="lookbook-badge">LOOK 01</div>
+                    </div>
+                    <div class="lookbook-info">
+                        <span class="lookbook-category">AUTUMN COUTURE</span>
+                        <h3 class="lookbook-name">The Obsidian Drape & Wool Blazer</h3>
+                        <p class="lookbook-details">Features hand-carved horn buttons and floating canvas construction.</p>
+                        <button class="btn btn-outline look-shop-btn" data-pdp-trigger="n-01">Quick View Look</button>
+                    </div>
+                </div>
+
+                <div class="lookbook-card">
+                    <div class="lookbook-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000&auto=format&fit=crop" alt="Lookbook Look 02 - Pleated Atelier Gown" class="lookbook-img">
+                        <div class="lookbook-badge">LOOK 02</div>
+                    </div>
+                    <div class="lookbook-info">
+                        <span class="lookbook-category">EVENING SERIES</span>
+                        <h3 class="lookbook-name">Asymmetric Pleated Silk Column</h3>
+                        <p class="lookbook-details">Continuous bias-cut silk organza draped directly on dressform.</p>
+                        <button class="btn btn-outline look-shop-btn" data-pdp-trigger="n-02">Quick View Look</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. WOMEN'S COLLECTION SPOTLIGHT -->
+    <section class="collection-feature-section" id="womens-collection">
+        <div class="container">
+            <div class="feature-banner women-banner">
+                <div class="feature-img-box">
+                    <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1000&auto=format&fit=crop" alt="Women's Collection Portrait" class="feature-img">
+                </div>
+                <div class="feature-content">
+                    <span class="feature-tag">CATEGORY SPOTLIGHT</span>
+                    <h2 class="feature-title">WOMEN'S AUTUMN ATELIER</h2>
+                    <p class="feature-text">
+                        Fluid silk evening gowns, structured leather trench coats, and sharp tailored midi skirts designed to empower with quiet sophistication.
+                    </p>
+                    <ul class="feature-highlights">
+                        <li>Bias-cut mulberry silk gowns</li>
+                        <li>Hand-burnished nappa leather outerwear</li>
+                        <li>Precision-stitched wool blazers</li>
+                    </ul>
+                    <a href="#featured-products" class="btn btn-dark filter-trigger-btn" data-filter-link="women">Explore Women's Line</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. MEN'S COLLECTION SPOTLIGHT -->
+    <section class="collection-feature-section reverse" id="mens-collection">
+        <div class="container">
+            <div class="feature-banner men-banner">
+                <div class="feature-content">
+                    <span class="feature-tag">CATEGORY SPOTLIGHT</span>
+                    <h2 class="feature-title">MEN'S TAILORED STRUCTURES</h2>
+                    <p class="feature-text">
+                        Deconstructed double-breasted overcoats, Italian cashmere turtlenecks, and oversized charcoal blazers built with architectural precision.
+                    </p>
+                    <ul class="feature-highlights">
+                        <li>Unstructured virgin wool overcoats</li>
+                        <li>Double-faced cashmere knits</li>
+                        <li>Minimalist tailored trousers</li>
+                    </ul>
+                    <a href="#featured-products" class="btn btn-dark filter-trigger-btn" data-filter-link="men">Explore Men's Line</a>
+                </div>
+                <div class="feature-img-box">
+                    <img src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?q=80&w=1000&auto=format&fit=crop" alt="Men's Collection Portrait" class="feature-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. COMPLETE E-COMMERCE PRODUCT CATALOG & FILTERS -->
+    <section class="products-section" id="featured-products">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">ATELIER CATALOGUE</span>
+                <h2 class="section-title">CURATED ATELIER PIECES</h2>
+                <p class="section-desc">Explore handcrafted luxury garments from our Autumn/Winter '26 capsule edition.</p>
+            </div>
+
+            <!-- E-Commerce Filter & Sorting Toolbar -->
+            <div class="catalog-toolbar">
+                <div class="filter-tabs" id="gender-filter-tabs">
+                    <button class="filter-tab active" data-gender="all">ALL</button>
+                    <button class="filter-tab" data-gender="women">WOMEN</button>
+                    <button class="filter-tab" data-gender="men">MEN</button>
+                    <button class="filter-tab" data-gender="new-arrivals">NEW ARRIVALS</button>
+                    <button class="filter-tab sale-tab" data-gender="sale">SALE</button>
+                </div>
+
+                <div class="toolbar-controls">
+                    <div class="select-wrapper">
+                        <label for="category-select" class="select-label">Category:</label>
+                        <select id="category-select" class="custom-select">
+                            <option value="all">All Categories</option>
+                            <option value="dresses">Dresses & Gowns</option>
+                            <option value="jackets">Jackets & Coats</option>
+                            <option value="tops">Tops & Knitwear</option>
+                            <option value="shirts">Shirts & Blouses</option>
+                            <option value="trousers">Trousers & Pants</option>
+                            <option value="jeans">Denim & Jeans</option>
+                            <option value="accessories">Bags & Accessories</option>
+                            <option value="shoes">Footwear & Shoes</option>
+                        </select>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <label for="sort-select" class="select-label">Sort By:</label>
+                        <select id="sort-select" class="custom-select">
+                            <option value="recommended">Recommended</option>
+                            <option value="newest">Newest Arrivals</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Customer Rating</option>
+                        </select>
+                    </div>
+
+                    <button class="btn-secondary-sm" id="reset-filters-btn">Reset Filters</button>
+                </div>
+            </div>
+
+            <!-- Catalog Status Row -->
+            <div class="catalog-status-bar">
+                <span class="results-count" id="results-count">Showing 16 Atelier Garments</span>
+                <div class="active-filter-pills" id="active-filter-pills"></div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid" id="product-grid">
+                <!-- Product cards dynamically populated by script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FASHION / EDITORIAL STORY -->
+    <section class="story-section" id="story">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-img-column">
+                    <div class="story-img-frame">
+                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1000&auto=format&fit=crop" alt="NOIRÉ Atelier Craftsmanship" class="story-img">
+                    </div>
+                </div>
+                <div class="story-content-column">
+                    <span class="section-tag">ATELIER HERITAGE</span>
+                    <h2 class="story-title">CRAFTING THE PERPETUAL SILHOUETTE</h2>
+                    <p class="story-lead">
+                        Every NOIRÉ garment begins as an architectural blueprint—a mathematical dialogue between the weight of Italian wool and the fluid motion of the human form.
+                    </p>
+                    <p class="story-text">
+                        Founded with a steadfast commitment to slow fashion and uncompromising craftsmanship, our private ateliers in Paris and Milan employ traditional floating canvas construction. We shun mass production in favor of small, numbered editions cut by master artisans.
+                    </p>
+                    <div class="story-quote-card">
+                        <p class="quote-text">"Elegance is not about being noticed, it's about being remembered through the quiet authority of pure form."</p>
+                        <span class="quote-author">— NOIRÉ Creative Direction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. NEWSLETTER SECTION -->
+    <section class="newsletter-section" id="newsletter">
+        <div class="container">
+            <div class="newsletter-card">
+                <span class="newsletter-tag">PRIVATE ATELIER ACCESS</span>
+                <h2 class="newsletter-title">JOIN THE NOIRÉ ATELIER</h2>
+                <p class="newsletter-desc">
+                    Subscribe to receive private invitations to seasonal runway releases, lookbook previews, and exclusive bespoke fitting appointments.
+                </p>
+                <form class="newsletter-form" id="newsletter-form" novalidate>
+                    <div class="input-wrapper">
+                        <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email address for newsletter">
+                        <button type="submit" class="btn btn-dark newsletter-btn">SUBSCRIBE</button>
+                    </div>
+                </form>
+                <div class="newsletter-toast" id="newsletter-toast" aria-live="polite"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="#" class="footer-logo">NOIRÉ</a>
+                    <p class="footer-blurb">
+                        A haute couture atelier exploring form, volume, and understated luxury. Designed in Paris & Milan.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Instagram" class="social-link">INSTAGRAM</a>
+                        <a href="#" aria-label="Pinterest" class="social-link">PINTEREST</a>
+                        <a href="#" aria-label="Vogue Runway" class="social-link">VOGUE RUNWAY</a>
+                        <a href="#" aria-label="LinkedIn" class="social-link">LINKEDIN</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">COLLECTIONS</h4>
+                    <ul class="footer-links">
+                        <li><a href="#featured-products" data-filter-link="new-arrivals">Autumn/Winter '26</a></li>
+                        <li><a href="#featured-products" data-filter-link="women">Women's Atelier</a></li>
+                        <li><a href="#featured-products" data-filter-link="men">Men's Tailoring</a></li>
+                        <li><a href="#lookbook">Lookbook N°04</a></li>
+                        <li><a href="#featured-products" data-filter-link="sale">Private Sale</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">ATELIER & SERVICES</h4>
+                    <ul class="footer-links">
+                        <li><button class="footer-btn-link" id="footer-size-guide-trigger">Size Guide & Fit</button></li>
+                        <li><button class="footer-btn-link" id="footer-account-trigger">My Orders & Tracking</button></li>
+                        <li><a href="#story">Bespoke Tailoring</a></li>
+                        <li><a href="#announcement-bar">Worldwide Shipping</a></li>
+                        <li><a href="#newsletter">Atelier Membership</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">CLIENT CARE</h4>
+                    <ul class="footer-links">
+                        <li><a href="#newsletter">Contact Atelier</a></li>
+                        <li><a href="#announcement-bar">Complimentary Shipping</a></li>
+                        <li><a href="#story">Returns & Exchanges</a></li>
+                        <li><a href="#story">Authenticity Guarantee</a></li>
+                        <li><a href="#story">Terms & Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 NOIRÉ HAUTE COUTURE ATELIER. ALL RIGHTS RESERVED.</p>
+                <p class="attribution">COLLEGE ASSIGNMENT PROJECT • FULL FRONTEND E-COMMERCE SHOWCASE</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ==========================================================================
+         PRODUCT DETAIL PAGE (PDP) MODAL
+         ========================================================================== -->
+    <div class="modal pdp-modal" id="pdp-modal" aria-hidden="true">
+        <div class="modal-backdrop" id="pdp-backdrop"></div>
+        <div class="modal-content pdp-content">
+            <button class="modal-close-btn pdp-close-btn" id="pdp-close-btn" aria-label="Close Product View">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="pdp-layout" id="pdp-layout-container">
+                <!-- Dynamically populated by script.js -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+         SHOPPING BAG / CART DRAWER
+         ========================================================================== -->
+    <div class="cart-drawer" id="cart-drawer" aria-hidden="true">
+        <div class="drawer-backdrop" id="cart-backdrop"></div>
+        <div class="cart-drawer-content">
+            <div class="cart-drawer-header">
+                <div class="cart-drawer-title-row">
+                    <h3 class="cart-title">YOUR SHOPPING BAG</h3>
+                    <span class="cart-item-count" id="cart-drawer-count">(0)</span>
+                </div>
+                <button class="modal-close-btn" id="cart-close-btn" aria-label="Close Cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Cart Shipping Progress Bar -->
+            <div class="cart-shipping-banner" id="cart-shipping-banner">
+                <p id="shipping-banner-text">Add ₹15,000 more for Complimentary Express Shipping.</p>
+                <div class="shipping-progress-bar">
+                    <div class="shipping-progress-fill" id="shipping-progress-fill" style="width: 0%;"></div>
+                </div>
+            </div>
+
+            <!-- Cart Items Container -->
+            <div class="cart-items-body" id="cart-items-container">
+                <!-- Dynamically populated by script.js -->
+            </div>
+
+            <!-- Cart Footer Summary -->
+            <div class="cart-drawer-footer" id="cart-footer">
+                <div class="promo-box">
+                    <input type="text" id="promo-input" placeholder="Promo code (e.g. NOIRE10)">
+                    <button id="apply-promo-btn" class="btn-sm">Apply</button>
+                </div>
+                <div class="promo-msg" id="promo-msg"></div>
+
+                <div class="cart-summary-rows">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">₹0</span>
+                    </div>
+                    <div class="summary-row" id="discount-row" style="display: none;">
+                        <span>Promo Discount (10%)</span>
+                        <span id="cart-discount" class="discount-text">-₹0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Express Delivery</span>
+                        <span id="cart-shipping">₹0</span>
+                    </div>
+                    <div class="summary-row total-row">
+                        <span>Total (INR)</span>
+                        <span id="cart-total">₹0</span>
+                    </div>
+                </div>
+
+                <button class="btn btn-dark btn-block checkout-trigger-btn" id="cart-checkout-btn">
+                    PROCEED TO CHECKOUT
+                </button>
+                <p class="checkout-guarantee-text">Complimentary Returns & 100% Authentic Atelier Guarantee</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+         CHECKOUT MODAL
+         ========================================================================== -->
+    <div class="modal checkout-modal" id="checkout-modal" aria-hidden="true">
+        <div class="modal-backdrop" id="checkout-backdrop"></div>
+        <div class="modal-content checkout-content">
+            <button class="modal-close-btn" id="checkout-close-btn" aria-label="Close Checkout">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="checkout-header">
+                <h2 class="checkout-brand-title">NOIRÉ ATELIER CHECKOUT</h2>
+                <span class="checkout-sub">SECURE DEMO CHECKOUT PIPELINE</span>
+            </div>
+
+            <form class="checkout-form-grid" id="checkout-form" novalidate>
+                <div class="checkout-main-column">
+                    
+                    <!-- Section 1: Contact Information -->
+                    <div class="checkout-step-box">
+                        <h4 class="step-heading">1. CONTACT INFORMATION</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkout-email">Email Address *</label>
+                                <input type="email" id="checkout-email" required placeholder="name@domain.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-phone">Phone Number *</label>
+                                <input type="tel" id="checkout-phone" required placeholder="+91 98765 43210">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Delivery Address -->
+                    <div class="checkout-step-box">
+                        <h4 class="step-heading">2. SHIPPING ADDRESS</h4>
+                        <div class="form-group">
+                            <label for="checkout-name">Full Name *</label>
+                            <input type="text" id="checkout-name" required placeholder="First and Last Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-address">Street Address & Suite *</label>
+                            <input type="text" id="checkout-address" required placeholder="House No, Building, Street">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkout-city">City *</label>
+                                <input type="text" id="checkout-city" required placeholder="Mumbai, Delhi, Bengaluru...">
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-state">State *</label>
+                                <input type="text" id="checkout-state" required placeholder="Maharashtra, Karnataka...">
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-pincode">PIN Code *</label>
+                                <input type="text" id="checkout-pincode" required placeholder="400001">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Delivery Options -->
+                    <div class="checkout-step-box">
+                        <h4 class="step-heading">3. DELIVERY OPTION</h4>
+                        <div class="shipping-option-radio active">
+                            <input type="radio" name="shipping-method" id="ship-std" value="standard" checked>
+                            <label for="ship-std">
+                                <strong>Standard Atelier Delivery</strong> (3–5 Business Days) — <span id="checkout-ship-price">FREE</span>
+                            </label>
+                        </div>
+                        <div class="shipping-option-radio">
+                            <input type="radio" name="shipping-method" id="ship-exp" value="express">
+                            <label for="ship-exp">
+                                <strong>VIP Express Air Shipping</strong> (1–2 Business Days) — ₹1,500
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Section 4: Payment Method UI -->
+                    <div class="checkout-step-box">
+                        <h4 class="step-heading">4. PAYMENT METHOD</h4>
+                        <div class="payment-selector">
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="upi" checked>
+                                <span>UPI / QR (Google Pay, PhonePe, Paytm)</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="card">
+                                <span>Credit / Debit Card (Visa, Mastercard, Amex)</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="cod">
+                                <span>Cash on Delivery (COD)</span>
+                            </label>
+                        </div>
+
+                        <!-- Dynamic Payment Fields -->
+                        <div class="payment-field-box" id="payment-upi-box">
+                            <label for="upi-id">Enter UPI ID</label>
+                            <input type="text" id="upi-id" placeholder="username@upi or username@okicici">
+                            <small>A payment request will be sent to your UPI app upon placing order.</small>
+                        </div>
+
+                        <div class="payment-field-box" id="payment-card-box" style="display: none;">
+                            <div class="form-group">
+                                <label for="card-num">Card Number</label>
+                                <input type="text" id="card-num" placeholder="4532 •••• •••• 8910">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="card-exp">Expiry (MM/YY)</label>
+                                    <input type="text" id="card-exp" placeholder="08/28">
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-cvv">CVV</label>
+                                    <input type="password" id="card-cvv" placeholder="•••" maxlength="4">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="payment-field-box" id="payment-cod-box" style="display: none;">
+                            <p class="cod-note">Pay with cash or card upon delivery at your doorstep. Verified PIN code required.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Checkout Sidebar Order Summary -->
+                <div class="checkout-side-column">
+                    <div class="checkout-summary-card">
+                        <h4 class="summary-card-title">ORDER SUMMARY</h4>
+                        <div class="checkout-items-preview" id="checkout-items-preview">
+                            <!-- Items list populated by script.js -->
+                        </div>
+                        <div class="summary-divider"></div>
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="checkout-subtotal">₹0</span>
+                        </div>
+                        <div class="summary-row" id="checkout-discount-row" style="display: none;">
+                            <span>Discount</span>
+                            <span id="checkout-discount" class="discount-text">-₹0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Delivery</span>
+                            <span id="checkout-shipping">₹0</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span>Grand Total</span>
+                            <span id="checkout-total">₹0</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-dark btn-block place-order-btn" id="place-order-btn">
+                            PLACE ORDER
+                        </button>
+                        <p class="secure-badge-note">🔒 SSL Encrypted 256-bit Frontend Checkout Simulation</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+         ORDER CONFIRMATION MODAL
+         ========================================================================== -->
+    <div class="modal confirmation-modal" id="confirmation-modal" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content confirmation-content">
+            <div class="confirmation-card">
+                <div class="success-icon-box">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <span class="confirmation-tag">ORDER CONFIRMED</span>
+                <h2 class="confirmation-title">THANK YOU FOR YOUR ATELIER ORDER</h2>
+                <p class="confirmation-desc">Your order has been received and is being prepared by our artisans in Milan.</p>
+
+                <div class="order-receipt-box">
+                    <div class="receipt-row">
+                        <span>Order Reference:</span>
+                        <strong id="confirm-order-id">#NOIRE-2026-8912</strong>
+                    </div>
+                    <div class="receipt-row">
+                        <span>Estimated Delivery:</span>
+                        <strong id="confirm-delivery-date">3-5 Business Days</strong>
+                    </div>
+                    <div class="receipt-row">
+                        <span>Total Paid:</span>
+                        <strong id="confirm-total-amount">₹0</strong>
+                    </div>
+                    <div class="receipt-row">
+                        <span>Shipping Address:</span>
+                        <span id="confirm-address-text">Address details...</span>
+                    </div>
+                </div>
+
+                <div class="confirmation-actions">
+                    <button class="btn btn-dark" id="view-my-orders-btn">View My Orders</button>
+                    <button class="btn btn-outline" id="continue-shopping-btn">Continue Shopping</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+         MY ACCOUNT & ORDERS TRACKER MODAL
+         ========================================================================== -->
+    <div class="modal account-modal" id="account-modal" aria-hidden="true">
+        <div class="modal-backdrop" id="account-backdrop"></div>
+        <div class="modal-content account-content">
+            <button class="modal-close-btn" id="account-close-btn" aria-label="Close Account">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="account-header">
+                <h2 class="account-title">MY ATELIER ACCOUNT</h2>
+                <div class="account-nav-tabs">
+                    <button class="account-tab active" data-tab="orders">My Orders (<span id="orders-tab-count">0</span>)</button>
+                    <button class="account-tab" data-tab="wishlist">Wishlist (<span id="wishlist-tab-count">0</span>)</button>
+                    <button class="account-tab" data-tab="profile">Profile & Addresses</button>
+                </div>
+            </div>
+
+            <!-- Tab 1: Orders -->
+            <div class="account-tab-content active" id="tab-orders">
+                <div class="orders-list-container" id="orders-list-container">
+                    <!-- Populated dynamically by script.js -->
+                </div>
+            </div>
+
+            <!-- Tab 2: Wishlist View -->
+            <div class="account-tab-content" id="tab-wishlist">
+                <div class="wishlist-grid-container" id="wishlist-grid-container">
+                    <!-- Populated dynamically by script.js -->
+                </div>
+            </div>
+
+            <!-- Tab 3: Profile & Saved Addresses -->
+            <div class="account-tab-content" id="tab-profile">
+                <div class="profile-card">
+                    <h3>ATELIER MEMBER PROFILE</h3>
+                    <p class="profile-sub">Manage your personal information and default shipping addresses.</p>
+                    <form id="profile-form" class="profile-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prof-name">Full Name</label>
+                                <input type="text" id="prof-name" value="Atelier Guest User">
+                            </div>
+                            <div class="form-group">
+                                <label for="prof-email">Email Address</label>
+                                <input type="email" id="prof-email" value="guest@noire-atelier.com">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prof-phone">Contact Phone</label>
+                                <input type="tel" id="prof-phone" value="+91 98765 43210">
+                            </div>
+                            <div class="form-group">
+                                <label for="prof-city">Default City</label>
+                                <input type="text" id="prof-city" value="Mumbai, MH">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-dark">Save Profile Changes</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+         SIZE GUIDE MODAL
+         ========================================================================== -->
+    <div class="modal size-guide-modal" id="size-guide-modal" aria-hidden="true">
+        <div class="modal-backdrop" id="size-guide-backdrop"></div>
+        <div class="modal-content size-guide-content">
+            <button class="modal-close-btn" id="size-guide-close-btn" aria-label="Close Size Guide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="size-guide-header">
+                <span class="section-tag">ATELIER FIT SPECIFICATIONS</span>
+                <h2 class="size-guide-title">SIZE & MEASUREMENT GUIDE</h2>
+                <p class="size-guide-desc">All NOIRÉ garments are cut to standard European haute couture measurements.</p>
+            </div>
+
+            <div class="size-table-wrapper">
+                <table class="size-table">
+                    <thead>
+                        <tr>
+                            <th>NOIRÉ Size</th>
+                            <th>Bust / Chest (in)</th>
+                            <th>Waist (in)</th>
+                            <th>Hips (in)</th>
+                            <th>European</th>
+                            <th>UK / US</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>XS</strong></td>
+                            <td>31 – 33</td>
+                            <td>24 – 26</td>
+                            <td>34 – 36</td>
+                            <td>EU 34</td>
+                            <td>UK 6 / US 2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>S</strong></td>
+                            <td>33 – 35</td>
+                            <td>26 – 28</td>
+                            <td>36 – 38</td>
+                            <td>EU 36</td>
+                            <td>UK 8 / US 4</td>
+                        </tr>
+                        <tr>
+                            <td><strong>M</strong></td>
+                            <td>35 – 37</td>
+                            <td>28 – 30</td>
+                            <td>38 – 40</td>
+                            <td>EU 38</td>
+                            <td>UK 10 / US 6</td>
+                        </tr>
+                        <tr>
+                            <td><strong>L</strong></td>
+                            <td>37 – 40</td>
+                            <td>30 – 33</td>
+                            <td>40 – 43</td>
+                            <td>EU 40</td>
+                            <td>UK 12 / US 8</td>
+                        </tr>
+                        <tr>
+                            <td><strong>XL</strong></td>
+                            <td>40 – 43</td>
+                            <td>33 – 36</td>
+                            <td>43 – 46</td>
+                            <td>EU 42</td>
+                            <td>UK 14 / US 10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="size-tips-box">
+                <h4>HOW TO MEASURE ACCURATELY:</h4>
+                <ul>
+                    <li><strong>Bust/Chest:</strong> Measure around the fullest part of your chest, keeping the tape level.</li>
+                    <li><strong>Waist:</strong> Measure around your natural waistline, at the narrowest point.</li>
+                    <li><strong>Hips:</strong> Stand with feet together and measure around the fullest part of your hips.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+         WRITE A REVIEW MODAL
+         ========================================================================== -->
+    <div class="modal review-modal" id="review-modal" aria-hidden="true">
+        <div class="modal-backdrop" id="review-backdrop"></div>
+        <div class="modal-content review-content">
+            <button class="modal-close-btn" id="review-close-btn" aria-label="Close Review Form">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <h3>WRITE AN ATELIER REVIEW</h3>
+            <p class="review-sub">Share your feedback on fit, drape, and fabric craftsmanship.</p>
+
+            <form id="add-review-form" class="review-form">
+                <div class="form-group">
+                    <label>Rating</label>
+                    <div class="star-rating-selector" id="star-rating-input">
+                        <span data-rating="1">★</span>
+                        <span data-rating="2">★</span>
+                        <span data-rating="3">★</span>
+                        <span data-rating="4">★</span>
+                        <span data-rating="5" class="active">★</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="rev-author">Your Name</label>
+                    <input type="text" id="rev-author" required placeholder="e.g. Victoria S.">
+                </div>
+
+                <div class="form-group">
+                    <label for="rev-title">Review Headline</label>
+                    <input type="text" id="rev-title" required placeholder="e.g. Exquisite Silk Drape & Tailoring">
+                </div>
+
+                <div class="form-group">
+                    <label for="rev-comment">Review Details</label>
+                    <textarea id="rev-comment" rows="4" required placeholder="Describe the fit, material quality, and craftsmanship..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-dark">Submit Review</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+         SEARCH OVERLAY MODAL
+         ========================================================================== -->
+    <div class="search-modal" id="search-modal" aria-hidden="true">
+        <div class="search-modal-backdrop" id="search-backdrop"></div>
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <h3 class="search-modal-title">SEARCH THE NOIRÉ ATELIER</h3>
+                <button class="modal-close-btn" id="search-close-btn" aria-label="Close Search Modal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="search-input-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="search-box-icon">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="search-input" placeholder="Search dress, coat, silk gown, trousers, leather..." autofocus>
+            </div>
+            <div class="search-results-list" id="search-results">
+                <!-- Search results populated dynamically by script.js -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+         MOBILE NAVIGATION DRAWER
+         ========================================================================== -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+        <div class="drawer-backdrop" id="drawer-backdrop"></div>
+        <div class="drawer-content">
+            <div class="drawer-header">
+                <a href="#" class="logo">NOIRÉ</a>
+                <button class="modal-close-btn" id="drawer-close-btn" aria-label="Close Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <nav class="drawer-links">
+                <a href="#featured-products" class="drawer-item" data-filter-link="new-arrivals">New Arrivals</a>
+                <a href="#featured-products" class="drawer-item" data-filter-link="women">Women's Line</a>
+                <a href="#featured-products" class="drawer-item" data-filter-link="men">Men's Tailoring</a>
+                <a href="#featured-products" class="drawer-item" data-filter-link="dresses">Dresses & Gowns</a>
+                <a href="#featured-products" class="drawer-item" data-filter-link="jackets">Jackets & Coats</a>
+                <a href="#lookbook" class="drawer-item">Lookbook N°04</a>
+                <a href="#featured-products" class="drawer-item sale-item" data-filter-link="sale">Private Sale</a>
+            </nav>
+            <div class="drawer-footer">
+                <p>PARIS • MILAN • NEW YORK</p>
+                <p class="drawer-contact">ATELIER@NOIRE-FASHION.COM</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+         TOAST NOTIFICATION CONTAINER
+         ========================================================================== -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+</body>
+</html>
